@@ -1,0 +1,30 @@
+<div class="alert alert-danger" *ngIf="!isValid">
+  <strong>Danger!</strong> {{message}}
+</div>
+<form action="/action_page.php">
+  <div class="form-group">
+    <label for="first_name">Primer nombre</label>
+    <input type="text" class="form-control" id="first_name" name="first_name" [(ngModel)]="user.first_name">
+  </div>
+  <div class="form-group">
+    <label for="second_name">Segundo nombre</label>
+    <input type="text" class="form-control" id="second_name" name="second_name" [(ngModel)]="user.second_name">
+  </div>
+  <div class="form-group">
+    <label for="first_surname">Primer apellido</label>
+    <input type="text" class="form-control" id="first_surname" name="first_surname" [(ngModel)]="user.first_surname">
+  </div>
+  <div class="form-group">
+    <label for="second_surname">Segundo apellido</label>
+    <input type="text" class="form-control" id="second_surname" name="second_surname" [(ngModel)]="user.second_surname">
+  </div>
+  <div class="form-group">
+    <label for="phone">Telefono</label>
+    <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="user.phone">
+  </div>
+   <div class="form-group">
+    <label for="addres">Dirección</label>
+    <input type="text" class="form-control" id="addres" name="addres" [(ngModel)]="user.addres">
+  </div>
+  <button type="submit" (click)="saveOrUpdate()" class="btn btn-default btn-save">Guardar</button>
+</form>

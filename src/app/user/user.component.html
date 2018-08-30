@@ -1,3 +1,23 @@
-<p>
-  user works!
-</p>
+<h1>Usuarios registrados</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Primer nombre</th>
+      <th scope="col">Segundo Nombre</th>
+      <th scope="col">Primer Apellido</th>
+      <th scope="col">Segundo Apellido</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Dirección</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of users">
+      <td>{{item.first_name}}</td>
+      <td>{{item.second_name}}</td>
+      <td>{{item.first_surname}}</td>
+      <td>{{item.second_surname}}</td>
+      <td>{{item.phone}}</td>
+      <td>{{item.addres}}</td>
+    </tr>
+  </tbody>
+</table>
